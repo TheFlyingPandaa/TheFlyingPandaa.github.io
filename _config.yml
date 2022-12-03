@@ -1,0 +1,26 @@
+title: Dev stuff 
+markdown: kramdown
+domain: theflyingpandaa.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://theflyingpandaa.github.io/  # the base hostname and protocol for your site, e.g. http://example.com
+
+# for atom feed
+author:
+  name: TheFlyingPanda 
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /posts/:title/
+exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
